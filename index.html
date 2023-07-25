@@ -15,11 +15,10 @@
         var button = document.querySelector("button");
         button.addEventListener("click", function(){
             const response = fetch("https://discord.com/api/v10/guilds/777393357524566077/members/329836271956656128", {
-                method: "PATCH",
+                method: "P",
                 headers: {
                     "Content-Type": "application/json",
-                    "Authorization" : "Bearer Bot " + token,
-                    "User-Agent" : "DiscordBot"
+                    "authorization" : "Bot " + document.getElementById("keybox").value
 
                 },
                 body: JSON.stringify({
