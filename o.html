@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaa Hoo</title>
+</head>
+<body>
+    <button style="width:20%; margin-left:40%">
+        <p>Press</p>
+    </button>
+    <input style="width:50%; margin-left:25%; margin-top:20px" type="password" id="keybox">
+    <script>
+        const token = document.getElementById("keybox").value;
+        var button = document.querySelector("button");
+        button.addEventListener("click", function(){
+            const response = fetch("https://discord.com/api/v10/guilds/777393357524566077/members/329836271956656128", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization" : "Bot " + token
+
+                },
+                body: JSON.stringify({
+                    "communication_disabled_until" : "2023-08-22T03:38:51"
+                })
+            }).then(response => response.json()).then(data => console.log(data));
+        });
+    </script>
+</body>
+</html>
