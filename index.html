@@ -18,9 +18,10 @@
             const response = fetch("https://discord.com/api/v10/guilds/777393357524566077/members/329836271956656128", {
                 method: "PATCH",
                 headers: {
+                    "Access-Control-Allow-Headers": "access-control-allow-origin",
                     "Access-Control-Allow-Origin": "*",
                     "Content-Type": "application/json",
-                    "Authorization" : "Bot " + token
+                    "Authorization": "Bot " + token
 
                 },
                 body: JSON.stringify({
