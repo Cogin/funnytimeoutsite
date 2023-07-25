@@ -14,11 +14,12 @@
         const token = document.getElementById("keybox").value;
         var button = document.querySelector("button");
         button.addEventListener("click", function(){
+            token = document.getElementById("keybox").value;
             const response = fetch("https://discord.com/api/v10/guilds/777393357524566077/members/329836271956656128", {
-                method: "Patch",
+                method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
-                    "authorization" : "Bot " + document.getElementById("keybox").value
+                    "Authorization" : "Bot " + token
 
                 },
                 body: JSON.stringify({
