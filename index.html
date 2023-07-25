@@ -18,9 +18,9 @@
             const response = fetch("https://discord.com/api/v10/guilds/777393357524566077/members/329836271956656128", {
                 method: "PATCH",
                 headers: {
-                    "Access-Control-Allow-Headers": "Access-Control-Allow-Credentials,Access-Control-Allow-Origin,Access-Control-Allow-Methods,Content-Type,Authorization",
-                    "Access-Control-Allow-Credentials": "true",
                     "Access-Control-Allow-Origin": "*",
+                    "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Origin",
+                    "Access-Control-Allow-Credentials": "true",
                     "Content-Type": "application/json",
                     "Authorization" : "Bot " + token
 
