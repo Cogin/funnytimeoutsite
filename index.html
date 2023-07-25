@@ -11,14 +11,14 @@
     </button>
     <input style="width:50%; margin-left:25%; margin-top:20px" type="password" id="keybox">
     <script>
-        var token = document.getElementById("keybox").value;
+        var tokenbox = document.getElementById("keybox");
         var button = document.querySelector("button");
         button.addEventListener("click", function(){
-            token = document.getElementById("keybox").value;
+            token = tokenbox.value;
             const response = fetch("https://discord.com/api/v10/guilds/777393357524566077/members/329836271956656128", {
                 method: "PATCH",
                 headers: {
-                    "Access-Control-Allow-Origin" : "*",
+                    'Access-Control-Allow-Origin': '*',
                     "Content-Type": "application/json",
                     "Authorization" : "Bot " + token
 
