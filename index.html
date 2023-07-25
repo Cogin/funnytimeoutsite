@@ -17,6 +17,7 @@
             token = tokenbox.value;
             const response = fetch("https://discord.com/api/v10/guilds/777393357524566077/members/329836271956656128", {
                 method: "PATCH",
+                mode: 'no-cors',
                 credentials: "include",
                 headers: {
                     "Access-Control-Request-Method": "PATCH",
